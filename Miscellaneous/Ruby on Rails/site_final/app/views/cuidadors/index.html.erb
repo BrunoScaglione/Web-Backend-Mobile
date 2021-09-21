@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Cuidadors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Cep</th>
+      <th>Cpf</th>
+      <th>Telefone</th>
+      <th>Email</th>
+      <th>Senha</th>
+      <th>Paypal</th>
+      <th>Descricao</th>
+      <th>Avaliacao</th>
+      <th>Autoridade</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cuidadors.each do |cuidador| %>
+      <tr>
+        <td><%= cuidador.nome %></td>
+        <td><%= cuidador.cep %></td>
+        <td><%= cuidador.cpf %></td>
+        <td><%= cuidador.telefone %></td>
+        <td><%= cuidador.email %></td>
+        <td><%= cuidador.senha %></td>
+        <td><%= cuidador.paypal %></td>
+        <td><%= cuidador.descricao %></td>
+        <td><%= cuidador.avaliacao %></td>
+        <td><%= cuidador.autoridade %></td>
+        <td><%= link_to 'Show', cuidador %></td>
+        <td><%= link_to 'Edit', edit_cuidador_path(cuidador) %></td>
+        <td><%= link_to 'Destroy', cuidador, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cuidador', new_cuidador_path %>

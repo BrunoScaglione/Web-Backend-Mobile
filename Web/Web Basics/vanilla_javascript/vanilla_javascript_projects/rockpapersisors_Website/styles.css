@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Asap:400,500,700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #24272E
+}
+
+header{
+	background: white;
+	padding: 20px;
+}
+ /* as cores para quando clicar */ 
+
+
+header > h1 {
+	color: #25272E;
+	text-align: center;
+	font-family: Asap, sans-serif;
+}
+
+.score-board{
+	margin: 20px auto;  /*20px top and bottom and centered*/
+	border: 3px solid white;
+	border-radius: 4px;
+	text-align: center;
+	width: 200px;
+	color: white;
+	font-size: 46px;
+	padding: 15px 20px; // aqui como  jah tinha sido definido a largura acho que ele errou mesmo em colocar esse padding horizontal que acabou nao mudando nada
+	font-family: Asap, sans-serif;
+	position: relative;
+}
+
+.badge {
+	background-color: #E2584D;
+	color: white;
+	font-size: 14px;
+	padding: 2px 10px;
+	font-family: Asap, sans-serif;
+}
+
+#user-label {
+	position: absolute;
+	top: 30;
+	left:-25px;
+}
+
+#computer-label {
+	position: absolute;
+	top: 30;
+	right: -30px;
+}
+
+.result{
+	font-size: 40px;
+	color: white;
+}
+
+.result > p{
+	text-align:center;
+	font-weight: bold;
+	font-family: Asap, sans-serif;
+}
+
+.choices{
+	margin-top: 50px;
+	text-align: center;
+}
+
+.choice{
+	border: 4px solid white;
+	border-radius: 50%;
+	margin: 0 20px; // espaco entre as imagens
+	padding: 10px;
+	padding: 10px;
+	display: inline-block;
+	transition: all 0.3s ease; // pra nao mudar de cor no hover instantaneamente, fica mais natural
+}
+
+.choice:hover{
+	cursor: pointer;
+	background: #24272E;
+}
+
+#action-message {
+	text-align: center;
+	color: white;
+	font-family: Asap, sans-serif;
+	font-weight: bold;
+	font-size: 20px;
+	margin-top: 20px;
+}
+
+/*essa parte tava la no meio e teve que mudar pra aqui embaixo pq a cor da borda nao tava funcionando quando clicava, embora a sombra tava. Provavelmente algum conflito que teve com o css*/
+.green-glow{
+	border: 4px solid #4dcc7d;
+	box-shadow 0 0  10px #31b43a; /*horizontal vertical blur color*/
+}
+.green-glow{
+	border: 4px solid #4dcc7d;
+	box-shadow 0 0  10px #31b43a;
+}
+.green-glow{
+	border: 4px solid #4dcc7d;
+	box-shadow 0 0  10px #31b43a;
+}

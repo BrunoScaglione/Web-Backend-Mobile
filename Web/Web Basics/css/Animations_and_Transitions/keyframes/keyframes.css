@@ -1,0 +1,31 @@
+body{
+    background: #333;
+}
+
+.box{
+    background:  white;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    animation-name: myanimation;
+    animation-duration: 4s; 
+    /* stops after two times (cn be set to infinite) */
+    animation-iteration-count: 2;
+    animation-delay: 2s;
+    /* termina e continua como circulo */
+    animation-fill-mode: forwards;
+    /* vai ao contrario */
+    /* podia ser alternate, vai de um aldo depois do outro */
+    /* animation-direction: reverse; */
+    /* ease-in-out starts slow and ends slow */
+    /* could be linear also */
+    /* animation-timing-function: ease-in-out  */
+}
+/* fades between colors */
+@keyframes myanimation {
+    0% {background-color: white; left: 0px; top:0px; border-radius: 0 0 0 0}
+    25% {background-color: red; left: 300px; top:0px; border-radius: 50% 0 0 0}
+    50% {background-color: green; left: 300px; top: 300px; border-radius: 50% 50% 0 0}
+    75% {background-color: blue;left: 0px; top: 300px; border-radius: 50% 50% 50% 0}
+    100% {background-color: white;left: 0px; top: 0px; border-radius: 50% 50% 50% 50%}
+}

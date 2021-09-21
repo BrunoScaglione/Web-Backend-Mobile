@@ -1,0 +1,15 @@
+<p>
+  <strong>Título:</strong>
+  <%= @post.titulo %>
+</p>
+<p>
+  <strong>Mensagem:</strong>
+  <%= @post.mensagem %>
+</p>
+<p>
+  <strong>Grupo:</strong>
+  <%= @post.group.nome %>
+</p>
+<%= link_to 'Deletar', @post, method: :delete, data: { confirm: 'Tem certeza?' } %>
+<%= link_to 'Editar', edit_post_path(@post) %>
+<%= link_to 'Voltar', posts_path %>

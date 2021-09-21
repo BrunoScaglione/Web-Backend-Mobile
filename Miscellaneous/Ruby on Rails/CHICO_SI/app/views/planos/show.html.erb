@@ -1,0 +1,12 @@
+<p>
+  <strong>Nome:</strong>
+  <%= @plano.nome %>
+</p>
+
+<p>
+  <strong>Clientes:</strong>
+
+</p>
+<%= link_to 'Deletar', @plano, method: :delete, data: { confirm: 'Tem certeza?' } %>
+<%= link_to 'Editar', edit_plano_path(@plano) %>
+<%= link_to 'Voltar', planos_path %>

@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Solicitantes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cep</th>
+      <th>Nome</th>
+      <th>Cpf</th>
+      <th>Telefone</th>
+      <th>Email</th>
+      <th>Senha</th>
+      <th>Paypal</th>
+      <th>Descricao</th>
+      <th>Avaliacao</th>
+      <th>Autoridade</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @solicitantes.each do |solicitante| %>
+      <tr>
+        <td><%= solicitante.cep %></td>
+        <td><%= solicitante.nome %></td>
+        <td><%= solicitante.cpf %></td>
+        <td><%= solicitante.telefone %></td>
+        <td><%= solicitante.email %></td>
+        <td><%= solicitante.senha %></td>
+        <td><%= solicitante.paypal %></td>
+        <td><%= solicitante.descricao %></td>
+        <td><%= solicitante.avaliacao %></td>
+        <td><%= solicitante.autoridade %></td>
+        <td><%= link_to 'Show', solicitante %></td>
+        <td><%= link_to 'Edit', edit_solicitante_path(solicitante) %></td>
+        <td><%= link_to 'Destroy', solicitante, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Solicitante', new_solicitante_path %>

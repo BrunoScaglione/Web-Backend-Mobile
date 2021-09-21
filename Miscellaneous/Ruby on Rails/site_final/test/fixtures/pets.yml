@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  especie: MyString
+  raca: MyString
+  porte: MyString
+  comentario: MyText
+  solicitante: one
+
+two:
+  nome: MyString
+  especie: MyString
+  raca: MyString
+  porte: MyString
+  comentario: MyText
+  solicitante: two

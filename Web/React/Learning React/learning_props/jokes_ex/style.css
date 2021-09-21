@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+}
+
+.jokes {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.joke {
+    flex-basis: 250px;
+    margin: 20px;
+}
+
+
+.joke > h2 {
+    font-size: 12px;
+    text-align: center;
+}
+
+.joke > .question {
+    float: left
+}
+
+.joke > .punchLine {
+    float: left
+}
+
+.jokes > .clear {
+    clear: both;
+}

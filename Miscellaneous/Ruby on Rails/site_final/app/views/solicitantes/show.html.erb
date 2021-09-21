@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cep:</strong>
+  <%= @solicitante.cep %>
+</p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @solicitante.nome %>
+</p>
+
+<p>
+  <strong>Cpf:</strong>
+  <%= @solicitante.cpf %>
+</p>
+
+<p>
+  <strong>Telefone:</strong>
+  <%= @solicitante.telefone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @solicitante.email %>
+</p>
+
+<p>
+  <strong>Senha:</strong>
+  <%= @solicitante.senha %>
+</p>
+
+<p>
+  <strong>Paypal:</strong>
+  <%= @solicitante.paypal %>
+</p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @solicitante.descricao %>
+</p>
+
+<p>
+  <strong>Avaliacao:</strong>
+  <%= @solicitante.avaliacao %>
+</p>
+
+<p>
+  <strong>Autoridade:</strong>
+  <%= @solicitante.autoridade %>
+</p>
+
+<%= link_to 'Edit', edit_solicitante_path(@solicitante) %> |
+<%= link_to 'Back', solicitantes_path %>

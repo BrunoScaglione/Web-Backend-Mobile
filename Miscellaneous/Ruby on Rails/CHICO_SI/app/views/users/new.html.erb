@@ -1,0 +1,112 @@
+<h1>Register</h1>
+
+<% if @user.errors.any? %>
+  <ul>
+    <% @user.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+
+<%= form_for @user do |f| %>
+
+  <p>
+    <%= f.label :email %><br/>
+    <%= f.text_field :email, class: 'form_control', placeholder: 'Digite seu email', autofocus: true %>
+  </p>
+  <p>
+    <%= f.label :senha %><br/>
+    <%= f.password_field :password, class: 'form_control', placeholder: 'Digite sua senha', autofocus: true %>
+  </p>
+  <% if current_user.authority == 2 %>
+    <div class="form-group">
+      <%= f.label :authority, 'Atleta' %>
+      <%= f.radio_button :authority, 0, :checked => true %>
+      <%= f.label :authority, 'Treinador' %>
+      <%= f.radio_button :authority, 1 %>
+      <%= f.label :authority, 'Administrador' %>
+      <%= f.radio_button :authority, 2 %>
+    </div>
+  <% end %>
+  <% if current_user.authority > 0 %>
+    <p>
+      <%= f.label :grupos %><br/>
+      <%= f.collection_check_boxes :group_ids, Group.all, :id, :nome do |cb| %>
+        <% cb.label(class: 'checkbox-inline input_checkbox') {cb.check_box(class: 'checkbox') + cb.text} %>
+      <% end %>
+    </p>
+  <% end %>
+  <p>
+    <%= f.label :nome %><br/>
+    <%= f.text_field :nome, class: 'form_control', autofocus: true %>
+  </p>
+  <p>
+    <%= f.label :genero %><br/>
+    <%= f.select :genero, select_list = { Masculino: 'Masculino', Feminino: 'Feminino' }  %>
+  </p>
+  <p>
+    <%= f.label :nascimento %><br/>
+    <%= f.date_select :nascimento %>
+  </p>
+  <p>
+    <%= f.label :registro %><br/>
+    <%= f.text_field :registro, class: 'form_control', autofocus: true %>
+  </p>
+  <p>
+    <%= f.label :telefone %><br/>
+    <%= f.text_field :telefone, class: 'form_control', autofocus: true %>
+  </p>
+  <p>
+    <%= f.label :rg %><br/>
+    <%= f.text_field :rg, class: 'form_control', autofocus: true %>
+  </p>
+  <p>
+    <%= f.label :cpf %><br/>
+    <%= f.text_field :cpf, class: 'form_control', autofocus: true %>
+  </p>
+  <p>
+    <%= f.label :endereco %><br/>
+    <%= f.text_field :endereco, class: 'form_control', autofocus: true %>
+  </p>
+  <p>
+    <%= f.label :estado_civil %><br/>
+    <%= f.text_field :estado_civil, class: 'form_control', autofocus: true %>
+  </p>
+
+  <p>
+    <%= f.label :profissao %><br/>
+    <%= f.text_field :profissao, class: 'form_control', autofocus: true %>
+  </p>
+  <p>
+    <%= f.label :nome %><br/>
+    <%= f.select(:plano, options_from_collection_for_select(Plano.all, :id, :nome)) %>
+  </p>
+  <p>
+    <%= f.label :data_filiacao %><br/>
+    <%= f.date_select :data_filiacao %>
+  </p>
+  <p>
+    <%= f.label :inicio_plano %><br/>
+    <%= f.date_select :inicio_plano %>
+  </p>
+
+  <p>
+    <%= f.label :agencia %><br/>
+    <%= f.text_field :agencia, class: 'form_control', autofocus: true %>
+  </p>
+  <p>
+    <%= f.label :conta %><br/>
+    <%= f.text_field :conta, class: 'form_control', autofocus: true %>
+  </p>
+  <p>
+    <%= f.label :cref %><br/>
+    <%= f.text_field :cref, class: 'form_control', autofocus: true %>
+  </p>
+
+  <p>
+    <%= f.submit 'Cadastrar' %>
+  </p>
+<% end %>
+
+<%= link_to 'Voltar', users_path %>

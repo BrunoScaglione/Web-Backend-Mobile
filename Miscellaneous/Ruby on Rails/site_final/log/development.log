@@ -1,0 +1,21 @@
+  [1m[35m (1.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (212.0ms)[0m  [1m[35mCREATE DATABASE `site_final_development` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (122.0ms)[0m  [1m[35mCREATE DATABASE `site_final_test` DEFAULT CHARACTER SET `utf8`[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (592.2ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (763.9ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL)[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT GET_LOCK('8080640507978877615', 0)[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ C:/Ruby25-x64/bin/rake:23
+Migrating to CreateSolicitantes (20191116022705)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT RELEASE_LOCK('8080640507978877615')[0m
+  ↳ C:/Ruby25-x64/bin/rake:23

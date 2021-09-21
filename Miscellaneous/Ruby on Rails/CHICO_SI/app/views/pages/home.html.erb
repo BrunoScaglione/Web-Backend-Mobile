@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<!-- Isso é um teste -->
+
+<html>
+<head>
+  <title>Site de remo</title>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      background-color: lightgray;
+    }
+
+    h1 {
+      font-family: verdana;
+      color: tomato;
+      text-align: right;
+    }
+
+    h2 {
+      font-family: verdana;
+      color: tomato;
+      text-align: right;
+    }
+
+    p {
+      font-family: verdana;
+      text-align: center;
+    }
+
+    h4 {
+      font-family: verdana;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<hr>
+<a href="https://youtu.be/JmcA9LIIXWw?t=44">
+  <img src="https://www.gannett-cdn.com/-mm-/487e45eb3deb72e80a2e8854ede1c881d56bcfcb/c=0-105-2125-1306/local/-/media/2018/03/13/USATODAY/USATODAY/636565439512580964-GettyImages-500798391.jpg?width=3200&height=1680&fit=crop" alt="Largarto" style="float:left;width:116px;height:116px;">
+</a>
+<h1>Olha lá, olha só</h1>
+<h2>É o site de remo</h2>
+<hr>
+<thead>
+<tr>
+  <th><%= link_to 'Logout', logout_path, method: :delete %></th>
+  <% if current_user.authority == 2 %>
+    <th><%= link_to 'Lista de posts', posts_path %></th>
+  <% end %>
+  <% if current_user.authority > 0 %>
+    <th><%= link_to 'Lista de usuários', users_path %></th>
+    <th><%= link_to 'Lista de grupos', groups_path %></th>
+    <th><%= link_to 'Lista de planos', planos_path %></th>
+  <% end %>
+  <th><%= link_to 'Usuário atual', current_user_path %></th>
+  <th><%= link_to 'Treinos', group_treinos_path %></th>
+  <th><%= link_to 'Calendário de eventos', events_path %></th>
+  <th colspan="3"></th>
+</tr>
+</thead>
+<hr>
+<h4>Site<br>de<br>remo</h4>
+
+</body>
+</html>

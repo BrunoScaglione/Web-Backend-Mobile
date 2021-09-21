@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Learn HTML5</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        #container {
+            background: silver;
+            width: 120px;
+            /*height: 600px;*/
+            margin: 0 auto;
+            border: 1px solid black;
+        }
+        
+        header {
+            background: brown width: 1200px;
+            height: 80px;
+        }
+        
+        nav {
+            background: orange;
+            width: 1200px;
+            height: 50px;
+        }
+        
+        section {
+            background: gray;
+            width: 900px;
+            height: 500px;
+            float: left;
+        }
+        
+        section header {
+            background: none;
+            width: 0;
+            height: 0;
+        }
+        
+        aside {
+            background: green;
+            width: 300px;
+            height: 500px;
+            float: left;
+        }
+        
+        footer {
+            background: brown;
+            width: 1200px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <header></header>
+        <nav>
+
+        </nav>
+        <main>
+            <section>
+                <header>
+
+                </header>
+                <article>
+
+                </article>
+            </section>
+            <aside>
+
+            </aside>
+            <div style='clear: both'></div>
+
+        </main>
+        <footer>
+
+        </footer>
+    </div>
+
+</body>
+
+</html>
+
+-------------------
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Learn HTML5</title>
+    <style>
+        #div1 {
+            width: 400px;
+            height: 200px;
+            background: silver;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <meter min="2" max="10" value="5"></meter><br>
+    <progress max="100" value="50"></progress>
+    <details>
+        <summary>The para</summary>
+        <p>This is the paragraph inside the details tag</p>
+        <ul>
+            <li>Home</li>
+            <li>Software</li>
+            <li>Articles</li>
+        </ul>
+    </details>
+    <figure>
+        <img src="an_image.jpg for ex" style="width:200" alt="">
+        <figcaption>this is the figure 1.1</figcaption>
+    </figure>
+
+    <p>This is the simple paragraph! But this is the <mark>marked     </mark>word in the paragraph!</p>
+    <div id="div1"> <wbr>
+        <!-- é pra quebrar uma palavra e o resto ir para linha de baixo -->
+        A lot of things writtenA lot ofthingswrittenAlotfthings<wbr>writtenA lot of things writtenA lot of things writtenA lot of things writtenA lot of things writtenA lot of things writtenA lot of things writtenA lot of things writtenA lot of things
+        writtenA lot of things written.
+    </div>
+
+
+</body>
+
+</html>
+
+---------------------
+
+<!-- multimedia -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Learn HTML5</title>
+</head>
+
+<body>
+    <!-- muted by default -->
+    <audio controls muted loop autoplay autoplay style="width:40px;">
+		<source src="audio1.mp3" type="audio/mpeg">		
+	</audio>
+    <!-- auto means you want to load the audio automatically which is the default, but for ex you have a lot of audios the site will lag, so you can put preload="none"-->
+    <!-- none already loads but doesent give full lenght of audio (doesnt seem to work until you play) -->
+    <audio controls muted loop preload="none">
+		<source src="audio1.mp3" type="audio/mpeg">		
+	</audio>
+    <!-- metadata(only the file size) gives you everything but is not loaded by default, when you click it starts loading -->
+    <audio controls muted loop preload="metadata">
+		<source src="audio1.mp3" type="audio/mpeg">		
+	</audio>
+    <!-- poster é a thumb -->
+    <video src="anim1.mp4" type="video/mp4" controls=" width= 300px" poster="myhome.jpg">
+	</video>
+
+</body>
+
+</html>
+
+-----------------
+
+<!-- css3 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Learn HTML5 and CSS3</title>
+    <style>
+        #div1 {
+            /*30 degrees*/
+            background: linear-gradient(30deg, orange, red);
+            width: 200px;
+            height: 200px;
+            border: 5px solid black;
+            border-radius: 10px;
+            float: left;
+            margin: 10px;
+        }
+        
+        #div2 {
+            background: linear-gradient(to bottom left, green, blue);
+            width: 200px;
+            height: 200px;
+            border: 5px solid black;
+            float: left;
+            margin: 10px;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+        }
+        
+        #div3 {
+            background: radial-gradient(green 5%, red 50%, blue 100%);
+            width: 200px;
+            height: 200px;
+            border: 5px solid black;
+            float: left;
+            margin: 10px;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div1"> </div>
+    <div id="div2"> </div>
+    <div id="div3"> </div>
+</body>
+
+</html>
+
+---------------
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #div1 {
+            background: orange;
+            /*width: 200px;
+			height: 200px;*/
+            border: 5px solid black;
+            float: left;
+            margin: 10px;
+            font-size: 40px;
+            padding: 100px;
+            color: red;
+            text-shadow: 2px 2px 10px black, 7px 7px red, 9px 9px blue;
+            /*to right to bottom glow multiple times */
+            box-shadow: 5px 5px 20px red;
+        }
+        
+        #div2 {
+            background: white;
+            /*width: 200px;
+			height: 200px;*/
+            float: left;
+            margin: 10px;
+            font-size: 40px;
+            padding: 100px;
+            color: red;
+            text-shadow: 2px 2px 10px black, 7px 7px red, 9px 9px blue;
+            /*to right to bottom glow multiple times */
+            box-shadow: 0 4px 20px silver inset;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div1">The text</div>
+    <div id="div2">The text2</div>
+</body>
+
+</html>
+
+---------------------
+
+<!-- css3 text -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Learn HTML5 & CSS3</title>
+    <style>
+            #div1 {
+            background: orange;
+            border: 1px solid black;
+            width: 200px;
+            /*float: left;*/
+            margin: 10px;
+            color: white;
+            /*sem overflow e white-space quanto mais texto, mais ia transbordando pra linhas debaixo, o whitespace trava no tamanho fixo da linha a caixa e o overflow hidden nao deixa vc ver o resto das coisas escritas que exedem a caixa*/
+            /*overflow: hidden;*/
+            text-overflow: ellipsis;
+            /*mesma coisa só que com ... */
+            white-space: nowrap;
+        }
+        
+        #div2 {
+            background: orange;
+            border: 1px solid black;
+            width: 200px;
+            /*	float: left;*/
+            margin: 10px;
+            color: white;
+            word-wrap: break-word;
+            /*could be "break all", qubra qq palavra pra preenche espaco vazio*/
+            /*sem a quebra na palavra, a palavra grande sai da caixa, com o word-wrap ele quebra e continua na linha debaixo*/
+    </style>
+</head>
+
+<body>
+    <div id="div1">The text, the basic text without meaning just for learning</div>
+    <div id="div2">The text, the basictextwithoutmeaningjust for learning2</div>
+
+</body>
+
+</html>
+
+--------------------
+
+<!-- css3 tranformation -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Learn HTML5 and CSS3</title>
+    <style>
+        #div1 {
+            background: orange;
+            border: 1px solid black;
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            transform: translate(50px, 50px);
+        }
+        
+        #div2 {
+            background: orange;
+            border: 1px solid black;
+            width: 200px;
+            height: 200px;
+            margin: 200px;
+            transform: scale(2, 2);
+        }
+        
+        #div3 {
+            background: orange;
+            border: 1px solid black;
+            width: 200px;
+            height: 200px;
+            margin: 200px;
+            transform: rotate(30deg);
+        }
+        /*rotateX is the default*/
+        
+        #div4 {
+            background: orange;
+            border: 1px solid black;
+            width: 200px;
+            height: 200px;
+            margin: 200px;
+            transform: rotateX(180deg);
+        }
+        
+        #div5 {
+            background: orange;
+            border: 1px solid black;
+            width: 200px;
+            height: 200px;
+            margin: 200px;
+            transform: skewY(45deg);
+            /*vira trapezio*/
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div1">wwwwwwwcef </div>
+    <div id="div2">ewgwgwbgre </div>
+    <div id="div3"> </div>
+    <div id="div4"> </div>
+    <div id="div5"> </div>
+</body>
+
+</html>
+
+---------------
+<!-- Adding Animation to the Project -->
+
+<!-- in the index.html -->
+<div class="img_block">
+    <img src="an_image.jpg for ex">
+</div>
+
+<!-- in the style.css -->
+.img_block{ height: 200px; overflow:hidden;
+<!-- quando a imagem aumenta na animacao, ela nao expande pra fora -->
+} @keyframes img_animation{ from{width: 100%;} to {width: 150%;} } article img{ width: 100%;
+<!-- height: 200px; -->
+<!-- travaria o crescimento da imagem na animacao na vertical -->
+animation: img_animation 2s; } article img: hover { animation: img_animation 2s; } .second_section h2:hover { text-decoration: underline; } .second_section h2{ .... text-decoration: none; transition: text-decoration 1s; } -------------------------------------
+------------------------------------- -------------------------------------

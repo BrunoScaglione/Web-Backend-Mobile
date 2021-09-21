@@ -1,0 +1,47 @@
+.textarea-block {
+  /* se tirar o focus nao funciona, vai sempre aparecer a barriha soh no ultimo */
+  position: relative; 
+}
+
+.textarea-block label {
+  font-size: 1.4rem;
+}
+
+/* vale pra todo textarea block que tem um textarea block dps dele */
+.textarea-block + .textarea-block {
+  margin-top: 1.4rem;
+}
+
+.textarea-block textarea {
+  font-size: 1.4rem;
+}
+
+.textarea-block textarea {
+  width: 100%;
+  height: 16rem;
+  min-height: 8rem;
+  margin-top: 0.8rem;
+  border-radius: 0.8rem;
+  background: var(--color-input-background);
+  border: 1px solid var(--color-input-background);
+  border: 1px solid var(--color-line-in-white);
+  outline: 0;
+  /* pra soh poder aumentar o tamanho verticalmente */
+  resize: vertical; 
+  padding: 1.2rem 1.6rem;
+  font: 1.6rem Archivo;
+}
+
+/* agora vamos adicionar uma barrinha de cor pequena embaixo 
+do textarea block quando o textarea dentro dele estiver em foco(selecionado) */
+
+.textarea-block:focus-within::after {
+  width: calc(100% - 3.2rem);
+  height: 2px;
+  content: '';
+  background: var(--color-primary-light);
+  position:absolute;
+  left: 1.6rem;
+  right: 1.6rem;
+  bottom: 6px;
+}

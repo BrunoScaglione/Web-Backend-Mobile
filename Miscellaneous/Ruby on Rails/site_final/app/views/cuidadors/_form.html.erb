@@ -1,0 +1,68 @@
+<%= form_with(model: cuidador, local: true) do |form| %>
+  <% if cuidador.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cuidador.errors.count, "error") %> prohibited this cuidador from being saved:</h2>
+
+      <ul>
+      <% cuidador.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cep %>
+    <%= form.text_field :cep %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cpf %>
+    <%= form.text_field :cpf %>
+  </div>
+
+  <div class="field">
+    <%= form.label :telefone %>
+    <%= form.text_field :telefone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :senha %>
+    <%= form.text_field :senha %>
+  </div>
+
+  <div class="field">
+    <%= form.label :paypal %>
+    <%= form.text_field :paypal %>
+  </div>
+
+  <div class="field">
+    <%= form.label :descricao %>
+    <%= form.text_area :descricao %>
+  </div>
+
+  
+    <% form.label :avaliacao,  %>
+    <% form.text_field :avaliacao, :value => '5' %>
+  
+
+
+    <% form.label :autoridade %>
+    <% form.text_field :autoridade, :value => '1' %>
+
+ 
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

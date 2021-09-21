@@ -1,0 +1,11 @@
+<p>
+  <strong>Nome:</strong>
+  <%= @group.nome %>
+</p>
+<% if @group.users.any? %>
+  <p>Membros: <%= render @group.users %></p>
+<% end %>
+
+<%= link_to 'Deletar', @group, method: :delete, data: { confirm: 'Tem certeza?' } %>
+<%= link_to 'Editar', edit_group_path(@group) %>
+<%= link_to 'Voltar', groups_path %>

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Título:</strong>
+  <%= @event.titulo %>
+</p>
+
+<p>
+  <strong>Local:</strong>
+  <%= @event.local %>
+</p>
+
+<p>
+  <strong>Descrição:</strong>
+  <%= @event.descricao %>
+</p>
+
+<p>
+  <strong>Criado por:</strong>
+  <%= User.find(params[@event.criador]) %>
+</p>
+
+<p>
+  <strong>Data:</strong>
+  <%= @event.date %>
+</p>
+
+<%= link_to 'Deletar', @event, method: :delete, data: { confirm: 'Tem certeza?' } %> |
+<%= link_to 'Editar', edit_event_path(@event) %> |
+<%= link_to 'Voltar', events_path %>

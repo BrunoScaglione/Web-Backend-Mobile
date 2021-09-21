@@ -1,0 +1,7 @@
+__*
+.tmp*
+.vscode
+desktop.ini
+**/*cache*
+**/*tmp*
+**/build*

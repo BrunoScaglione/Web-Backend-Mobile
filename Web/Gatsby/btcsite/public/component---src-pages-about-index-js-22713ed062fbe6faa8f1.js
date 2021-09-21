@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{O0dG:function(n,e,t){"use strict";t.r(e);var o=t("q1tI"),r=t.n(o),c=t("vOnD").b.div.withConfig({componentId:"sc-6tba0i-0"})(["color:",";"],(function(n){return n.theme.primary}));e.default=function(){return r.a.createElement(c,null,r.a.createElement("h1",null,"Hello world"))}}}]);
+//# sourceMappingURL=component---src-pages-about-index-js-22713ed062fbe6faa8f1.js.map

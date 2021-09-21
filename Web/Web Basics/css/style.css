@@ -1,0 +1,31 @@
+
+#thirdparagraph{
+			color:red; background-color: lightgreen;
+		}
+
+.main-class{
+	color:brown;
+
+}
+
+.back-color{
+	background-color: silver;
+}
+
+a:link{
+	color: red;
+}
+
+a:visited{
+  
+   color: brown;
+
+}
+
+a:hover{
+	color:orange;
+}
+
+a:selected{
+	color: green;
+}

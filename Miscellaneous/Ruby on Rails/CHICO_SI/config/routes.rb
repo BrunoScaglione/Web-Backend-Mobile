@@ -1,0 +1,67 @@
+Rails.application.routes.draw do
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  get 'home', to: 'pages#home'
+
+  root 'sessions#new'
+  post 'login', to: 'sessions#create'
+  delete 'logout', to: 'sessions#destroy'
+
+  get 'register', to: 'users#new'
+  post 'users', to: 'users#create'
+  get 'users', to: 'users#index'
+  get 'users/:id', to: 'users#show', as: 'user'
+  get 'current_user', to: 'users#show_current'
+  get 'users/:id/edit', to: 'users#edit', as: 'edit_user'
+  patch 'users/:id', to: 'users#update'
+  delete 'users/:id', to: 'users#destroy'
+
+  get 'new_event', to: 'events#new'
+  post 'events', to: 'events#create'
+  get 'events', to: 'events#index'
+  get 'events/:id', to: 'events#show', as: 'event'
+  get 'events/:id/edit', to: 'events#edit', as: 'edit_event'
+  patch 'events/:id', to: 'events#update'
+  delete 'events/:id', to: 'events#destroy'
+
+  get 'new_group', to: 'groups#new'
+  post 'groups', to: 'groups#create'
+  get 'groups', to: 'groups#index'
+  get 'groups/:id', to: 'groups#show', as: 'group'
+  get 'groups/:id/edit', to: 'groups#edit', as: 'edit_group'
+  patch 'groups/:id', to: 'groups#update'
+  delete 'groups/:id', to: 'groups#destroy'
+
+  get 'new_plano', to: 'planos#new'
+  post 'planos', to: 'planos#create'
+  get 'planos', to: 'planos#index'
+  get 'planos/:id', to: 'planos#show', as: 'plano'
+  get 'planos/:id/edit', to: 'planos#edit', as: 'edit_plano'
+  patch 'planos/:id', to: 'planos#update'
+  delete 'planos/:id', to: 'planos#destroy'
+
+  get 'new_pagamento', to: 'pagamentos#new'
+  post 'pagamentos', to: 'pagamentos#create'
+  get 'pagamentos', to: 'pagamentos#index'
+  get 'pagamentos/:id', to: 'pagamentos#show', as: 'pagamento'
+  get 'pagamentos/:id/edit', to: 'pagamentos#edit', as: 'edit_pagamento'
+  patch 'pagamentos/:id', to: 'pagamentos#update'
+  delete 'pagamentos/:id', to: 'pagamentos#destroy'
+
+  get 'new_post', to: 'posts#new'
+  post 'posts', to: 'posts#create'
+  get 'posts', to: 'posts#index'
+  get 'posts/:id', to: 'posts#show', as: 'post'
+  get 'posts/:id/edit', to: 'posts#edit', as: 'edit_post'
+  patch 'posts/:id', to: 'posts#update'
+  delete 'posts/:id', to: 'posts#destroy'
+
+  get 'group_treinos/:group_id/new_treino', to: 'treinos#new', as: 'new_treino'
+  get 'group_treinos', to: 'treinos#group_index'
+  post 'group_treinos/:group_id', to: 'treinos#create', as: 'treinos'
+  get 'group_treinos/:group_id', to: 'treinos#index', as: 'treino_group'
+  get 'group_treinos/:group_id/:id', to: 'treinos#show', as: 'treino'
+  get 'group_treinos/:group_id/:id/edit', to: 'treinos#edit', as: 'edit_treino'
+  patch 'group_treinos/:group_id/:id', to: 'treinos#update'
+  delete 'group_treinos/:group_id/:id', to: 'treinos#destroy'
+end

@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @cuidador.nome %>
+</p>
+
+<p>
+  <strong>Cep:</strong>
+  <%= @cuidador.cep %>
+</p>
+
+<p>
+  <strong>Cpf:</strong>
+  <%= @cuidador.cpf %>
+</p>
+
+<p>
+  <strong>Telefone:</strong>
+  <%= @cuidador.telefone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @cuidador.email %>
+</p>
+
+<p>
+  <strong>Senha:</strong>
+  <%= @cuidador.senha %>
+</p>
+
+<p>
+  <strong>Paypal:</strong>
+  <%= @cuidador.paypal %>
+</p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @cuidador.descricao %>
+</p>
+
+<p>
+  <strong>Avaliacao:</strong>
+  <%= @cuidador.avaliacao %>
+</p>
+
+<p>
+  <strong>Autoridade:</strong>
+  <%= @cuidador.autoridade %>
+</p>
+
+<%= link_to 'Edit', edit_cuidador_path(@cuidador) %> |
+<%= link_to 'Back', cuidadors_path %>

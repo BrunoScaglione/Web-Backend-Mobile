@@ -1,0 +1,16 @@
+/* pra corrigir o estilo que ja ta vindo configurado no html */
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    /* vai fazer com que o padding nao aumenta a heigt ou width dos nossos elementos */
+    box-sizing: bordex-box;
+
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fafafa;
+    color: #333
+}

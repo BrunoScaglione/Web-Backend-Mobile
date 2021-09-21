@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  app:
+    # eh uma copia do build que a gente tinha feito antes, passando a localizacao do arquivo Dockerfile
+    # é um . pois eh no mesmo diretorio mesmo
+    build: .
+    command: npm start
+    ports:
+      - "3000:3000"
+    # qual pasta que eu quero refletir as alteracoes, e pra onde eu vou mandar
+    # vamos mandar pra pasta usr/app que é onde ta a nossa aplicacao (definimos dentro do Dockerfile WORKDIR /usr/app)
+    volumes:
+      - .:/usr/app

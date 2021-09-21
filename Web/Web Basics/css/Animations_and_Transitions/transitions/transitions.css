@@ -1,0 +1,71 @@
+body {
+    background: #333;
+}
+
+.box{
+    background: white;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    margin: auto;
+    top: 200px;
+    transition-property: background, border-radius;
+    /* if we want all to animate together, we can put : all above */
+    /* transition-duration: 1s, 3s; border takes longer time than color */
+    transition-delay: 2s;
+    transition-timing-function: ease in;
+}
+
+.box:hover{
+    background: red;
+    border-radius:  50%;
+    transform: rotateY(180deg);
+}
+/* if i keep clicking it will get darker and darker */
+.box:active{
+    background: red;
+}
+
+
+
+
+
+
+
+
+
+
+/* 
+TRANSITIONAL PROPERTIES
+-Properties that have an identifiable halfway point
+
+background-color 
+background-position 
+border-color 
+border-width 
+border-spacing 
+bottom 
+color
+font-size 
+font-weight 
+height left 
+letter-spacing 
+line-height 
+margin 
+max-height 
+max-width 
+min-height 
+min-width 
+opacity 
+outline-color 
+outline-offset 
+outline-width 
+padding right 
+text-indent 
+text-shadow 
+top 
+vertical-align 
+visibility 
+width 
+word-spacing 
+z-index */

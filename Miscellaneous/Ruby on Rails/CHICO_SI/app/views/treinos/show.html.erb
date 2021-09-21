@@ -1,0 +1,4 @@
+<%= @treino.descricao %>
+<%= link_to 'Voltar', treino_group_path(@group.id) %>
+<%= link_to 'Deletar', @treino, method: :delete, data: { confirm: 'Tem certeza?' } %> |
+<%= link_to 'Editar', edit_treino_path %>

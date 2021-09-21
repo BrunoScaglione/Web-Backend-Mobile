@@ -1,0 +1,29 @@
+<%= form_with(model: post, local: true) do |f| %>
+  <% if post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(post.errors.count, "error") %> impediu este post de ser criado:</h2>
+
+      <ul>
+        <% post.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :titulo %>
+    <%= f.text_field :titulo %>
+  </div>
+  <div class="field">
+    <%= f.label :mensagem %>
+    <%= f.text_field :mensagem %>
+  </div>
+  <div>
+    <%= f.label :group_id %>
+    <%= f.select(:group_id, options_from_collection_for_select(Group.all, :id, :nome)) %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Salvar'%>
+  </div>
+<% end %>

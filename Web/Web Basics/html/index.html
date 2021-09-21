@@ -1,0 +1,900 @@
+<h1> The heading </h1>
+<hr>
+<p title="the P Tag">This is the First Line. <br>This is the Second Line</p>
+
+------------
+
+<!DOCTYPE html>
+<html>
+<!-- <head> -->
+<!--  -->
+<!-- the title -->
+<title> Learn HTML</title>
+</head>
+
+<body>
+    <!-- the heading -->
+    <h1>Heading</h1>
+    <p>This is the paragraph</p>
+    <!-- <p>Aditional paragraph</p> -->
+    <!--<p>Aditional paragraph</p> -->
+</body>
+<!-- pre formated tag includes tabs, spaces, like normaling writing -->
+<pre>
+				This        is        the      paragraph    
+	</pre>
+
+</html>
+
+
+----------
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+    <h3> The unordered List</h3>
+    <!-- unordered list-->
+    <!-- deafult is circle-->
+    <ul type="square">
+        <li>Samsung</li>
+        <li>Iphone</li>
+        <li>Nokia</li>
+    </ul>
+
+    <h3>The ordered List</h3>
+    <!-- Ordered List -->
+    <!-- Default is numbers -->
+    <!-- <ol type="I"> gets romans-->
+    <ol type="a">
+        <li>Hp</li>
+        <li>Dell</li>
+        <li>Hp</li>
+        <li>Hp</li>
+        <li>Hp</li>
+    </ol>
+</body>
+
+</html>
+
+-----------
+
+
+<!DOCTYPE html>
+
+<head>
+    <title>Learn HTML</title>
+</head>
+
+<body>
+    <!-- b is bold -->
+    <!-- u is underlining -->
+    <!--  -->
+    <p>This is a simple paragraph</p>
+    <p>This is the <b>paragraph</b>/p>
+        <p>This is the <u>paragraph</u>/p>
+            <p>This is the <u><b><i>paragraph</i></b></u>/p>
+                <p><small>You can see that this is the small text</small></p>
+                <!-- del risca o numero -->
+                <p>The price od the shampoo is: <del>100</del></p>
+                <p> you are number 5<sup>th</sup></p>
+                <p> the atomic mass C<sub>th</sub></p>
+                <!-- mark eh grifar -->
+                <p>This text should be <mark>marked</mark></p>
+
+</body>
+
+</html>
+
+
+-------------
+
+<!DOCTYPE html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- eh pra identar -->
+    <dl>
+        <dt>2015</dt>
+        <dd>2015 was a good year</dd>
+        <dt>2016</dt>
+        <dd>I hope that 2016 end without any big issue</dd>
+    </dl>
+
+</body>
+
+</html>
+
+---------------
+<!-- SEARCH HTML ENTITIES O WRITE SPECIFIC SYMBOLS -->
+<!-- INSERT IMAGES -->
+<!DOCTYPE html>
+
+<head>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- the second image will be in line -->
+    <img src="path" alt="This is the image of my home" title="House" width="300">
+    <img src="path" alt="This is the image of my home" title="House" width="300">
+</body>
+
+</html>
+
+--------------------
+<!-- CREATE TABLE -->
+
+<!DOCTYPE html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <table border='1' widht='500' height='300' cellspacing='5' cellpading='20'>
+        <thead>
+            <tr>
+                <!-- rowspan makes it cover the two rows of the thead -->
+                <th rowspan="5">Table</th>
+                <th>Nos</th>
+                <!-- now info is covering two sells -->
+                <th colspan="2">Info</th>
+            </tr>
+            <tr>
+                <th>S.no</th>
+                <th>Name</th>
+                <th>Father Name</th>
+                <th>Contact No.</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <!-- rowspan makes it cover the three rows of the tbody-->
+                <td rowspan="3"> 1</td>
+                <td>Bruno</td>
+                <td>Claudio</td>
+                <td>15 99999999</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Luiz</td>
+                <td>Claudio</td>
+                <td>71367136716</td>
+            </tr>
+
+        </tbody>
+    </table>
+</body>
+
+</html>
+
+--------------------
+<!-- lets nest tables -->
+
+<!DOCTYPE html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <table border='1' widht='500' height='300' cellspacing='5' cellpading='20'>
+        <thead>
+            <tr>
+                <!-- rowspan makes it cover the two rows of the thead -->
+                <th rowspan="5">Table</th>
+                <th>Nos</th>
+                <!-- now info is covering two sells -->
+                <th colspan="2">Info</th>
+            </tr>
+            <tr>
+                <th>S.no</th>
+                <th>Name</th>
+                <th>Father Name</th>
+                <th>Contact No.</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <!-- rowspan makes it cover the three rows of the tbody-->
+                <td rowspan="3"> 1</td>
+                <td>Bruno</td>
+                <td>Claudio</td>
+                <td>
+                    <table border='1'>
+                        <tr>
+                            <td>352454</td>
+                            <td>25255</td>
+                            <td>235235235</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Luiz</td>
+                <td>Claudio</td>
+                <td>71367136716</td>
+            </tr>
+
+        </tbody>
+    </table>
+</body>
+
+</html>
+
+
+-----------------
+
+<!-- CREATE LINKS <-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>The index Page</h3>
+    <a href="http://google.com" target=_ top>Google</a><br>
+    <a href="link.html#secondheading" target="_blank">The link Page</a>
+    <a href="index.html">The Index Page</a>
+    <!-- iframe is framing other site inside your site -->
+    <iframe src="http://www.bing.com"></iframe>
+
+</body>
+
+</html>
+
+-------------------
+
+<!-- CSS -->
+
+<!DOCTYPE html>
+
+<head>
+
+    <title>Document</title>
+    <!-- external css -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /*  p{
+			color:red; background-color: lightgreen;
+		}
+
+		h1{background-color: lightblue;
+		} */
+    </style>
+</head>
+
+<body>
+    <h1>See this</h1>
+    <p> style='color:red'; background-color: orange;'</p>
+    <p> style='color:red'; background-color: orange;'</p>
+    <p> style='color:red'; background-color: orange;'</p>
+
+</body>
+
+</html>
+
+
+---------------
+
+<!-- now lets see how to define the styles for each id or with classes-->
+
+<!DOCTYPE html>
+
+<head>
+
+    <title>Document</title>
+    <!-- external css -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /*  p{
+			color:red; background-color: lightgreen;
+		}
+
+		h1{background-color: lightblue;
+		} */
+    </style>
+</head>
+
+<body>
+    <h1 class="main-class back-color">See this</h1>
+    <p style='color:red' background-color: 'orange'> </p>
+    <p class='main-class'> style='color:red'; background-color: orange;'</p>
+    <p id="thirdparagraph"> style='color:red'; background-color: orange;'</p>
+
+</body>
+
+</html>
+
+-------------------
+<!-- how to change color of the links -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>The index Page</h3>
+    <a href="http://google.com" target=_ top>Google</a><br>
+    <a href="link.html#secondheading" target="_blank">The link Page</a>
+    <a href="index.html">The Index Page</a>
+    <!-- iframe is framing other site inside your site -->
+    <iframe src="http://www.bing.com"></iframe>
+
+</body>
+
+</html>
+
+--------------------
+<!-- div tag (has no style byitself, needs fully css)-->
+
+<!DOCTYPE html>
+
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        #div1 {
+            color: blue;
+            background-color: red;
+            /* discover w and h of the page */
+            width: 1260x;
+            height: 650px;
+            margin: 50px;
+            /*   padding aumenta de qq lado*/
+            padding: 50px;
+        }
+        
+        #div2 {
+            color: green;
+            background-color: red;
+            <!-- discover w and h of the page -->width: 1260x;
+            height: 650px;
+            margin-top: 50px;
+            padding-right: 20px;
+            padding: 30px 50px 50px 100px;
+            border: 5px black solid;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div1">The div Tag </div>
+    <div id="div2">The div Tag </div>
+
+</body>
+
+</html>
+
+----------------------
+
+<!DOCTYPE html>
+
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #div1 {
+            width: 200px;
+            height: 200px;
+            background: url {
+                myimagepath.jpg
+            }
+            background-size: 200px 200px background-repeat: no-repeat;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div1"></div>
+</body>
+
+</html>
+
+
+<!DOCTYPE html>
+
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #div1 {
+            width: 200px;
+            height: 200px;
+            margin: 50px;
+            background: orange;
+            float: left;
+        }
+        
+        #div2 {
+            width: 200px;
+            height: 200px;
+            margin: 50px;
+            background: red;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="maindiv">
+        <div id="div1"></div>
+        <div id="div2"></div>
+        <div style="clear:both;"></div>
+    </div>
+</body>
+
+</html>
+
+------------------
+
+<!DOCTYPE html>
+
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #div1 {
+            width: 200px;
+            height: 200px;
+            background: orange;
+        }
+        
+        p {
+            text-decoration: underline;
+        }
+        
+        #par1 {
+            text-decoration: underline;
+            text-align: center;
+            text-transform: uppercase;
+            word-spacing: 50px;
+            line-height: 2;
+            font-size: 50px;
+        }
+        
+        #par2 {
+            text-decoration: overline;
+            text-align: right;
+            text-transform: lowercase;
+            letter-spacing: 10px;
+            font-style: italic;
+        }
+        
+        #par3 {
+            text-decoration: line-through;
+            text-align: left;
+            /*nao muda nada*/
+            text-transform: capitalize;
+        }
+        
+        #par4 {
+            font-family: arial;
+        }
+        
+        <style></head><body><div id="div1"></div><p id="par1">This is the simple paragraph</p><p id="par2">This is the simple paragraph</p><p id="par3">This is the simple paragraph</p><p id="par4">This is the simple paragraph</p></body></html>------------------ <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>Document</title><link rel="stylesheet" href="style.css"><style>table {
+            width: 500px;
+            height: 200px;
+        }
+        
+        table,
+        th,
+        td {
+            /*border: 2px solid black;*/
+            border-bottom: 2px solid black;
+            border-collapse: collapse;
+        }
+        
+        td {
+            text-align: center padding: 10px;
+        }
+        /*just want in the body the hover */
+        
+        tbody tr:hover {
+            background: silver;
+        }
+        
+        thead tr {
+            background: brown;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>S.no</th>
+                <th>Student name</th>
+                <th>Father name</th>
+                <th>Teacher name</th>
+                <th>Contact Number</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>John</td>
+                <td>Doe</td>
+                <td>Mark</td>
+                <td>
+                    <123456789/td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>John</td>
+                <td>Doe</td>
+                <td>Mark</td>
+                <td>
+                    <123456789/td>
+            </tr>
+
+        </tbody>
+    </table>
+
+</body>
+
+</html>
+
+--------------------
+
+<!-- css lists -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #ul1 {
+            list-style-type: square;
+            list-style-image: url(animage.png for ex) list-style-position: outside;
+            background: green;
+        }
+        
+        #ul1 li {
+            font-size: 25px;
+            background: silver;
+        }
+        
+        #ul2 {
+            /*list-style-type: square;*/
+            list-style-image: square inside url(animage.png for ex)
+        }
+        
+        #ul2 li {
+            font-size: 25px;
+        }
+        
+        #ul3 {
+            list-style: none;
+        }
+        
+        #ul3 li {
+            font-size: 25px;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id='ul1'>
+        <li>Brazil</li>
+        <li>eua</li>
+        <li>Argentina</li>
+        <li>Brazil</li>
+        <li>Brazil</li>
+    </ul>
+    <ul id='ul2'>
+        <li>Brazil</li>
+        <li>eua</li>
+        <li>Argentina</li>
+        <li>Brazil</li>
+        <li>Brazil</li>
+    </ul>
+
+    <ul id='ul3'>
+        <li>Brazil</li>
+        <li>eua</li>
+        <li>Argentina</li>
+        <li>Brazil</li>
+        <li>Brazil</li>
+    </ul>
+
+</body>
+
+</html>
+
+--------------------------
+<!-- navigation menu -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #ul3 {
+            list-style: none;
+        }
+        
+        #ul3 li {
+            font-size: 25px;
+            float: left;
+            background: orange;
+            margin-left: 10px;
+            /*sem essa margem as palavras ficavam amutuadas*/
+            width: 150px;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        #ul3 li:hover {
+            background: brown;
+            color: white;
+            border-bottom: 10px solid orange;
+        }
+        
+        #ul3 a {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul id='ul3'>
+        <a href="#">
+            <li>Home
+                <li>
+        </a>
+        <a href="#">
+            <li>Software</li>
+        </a>
+        <a href="#">
+            <li>Music</li>
+        </a>
+        <a href="#">
+            <li>Articles</li>
+        </a>
+        <a href="#">
+            <li>Contact us</li>
+        </a>
+    </ul>
+
+</body>
+
+</html>
+
+--------------------------
+<!-- creating form -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        form {
+            width: 500px;
+            background: silver;
+            padding: 20px;
+            border: 2px solid black;
+            /*border: none;*/
+            margin: 0 auto;
+            /*top-bottom left right*/
+        }
+        
+        input[type='text'],
+        input[type='password'],
+        select {
+            width: 380px;
+            height: 20px;
+            border: 1px solid black;
+            /*border-bottom: 1px silver solid;*/
+            background: #f1f1f1;
+        }
+        
+        textarea {
+            resize: none;
+            border: 1px solid black;
+            border: none;
+        }
+        
+        input[type='submit'] {
+            background: brown;
+            color: white;
+            border: 1px solid black;
+            width: 380px;
+            padding: 10px 0;
+            outline: none;
+        }
+        
+        input[type='submit']:hover {
+            background: silver;
+            color: brown;
+        }
+        
+        input[type='text']:focus,
+        input[type=password]:focus,
+        select:focus {
+            background: lightgreen;
+        }
+        
+        input[type='text']:hover,
+        input[type=password]:hover,
+        select:hover,
+        textarea:hover {
+            border-color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <form action='/' method="POST">
+        <!-- vai para mesma pagina(url) e eh um post -->
+        <h2>Fill the Form</h2>
+        <table>
+            <tr>
+                <td><label for="user">User Name</label></td>
+                <td><input type="text" name="user" id="user"></td>
+            </tr>
+            <tr>
+                <td><label for="pass">Password</label></td>
+                <td><input type="password" name="pass" id="pass"></td>
+            </tr>
+            <tr>
+                <td><label for="pass">Gender/label></td>
+				<td>Male:<input type="radio" name= "gender" value="male"> <br> Female:<input type="radio" name="gender" value="female"><br><br></td> 	
+			</tr>
+			<tr>
+				<td><label for="user">Skills</label></td>
+                <td>HTML:<input type="checkbox" name="html" value="html"> <br> CSS: <input type="checkbox" name="css" value="css"></td>
+            </tr>
+            <tr>
+                <td><label for="country">Select your  country/label></td>
+				<td>
+					<select name="country" id="country">
+						<option value="">Select your country </option>
+						<option value="pk">Pakistan </option>
+						<option value="in">India</option>
+						<option value="uk">United Kingdom </option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="comments">Comments</label></td>
+                <td><textarea name="comments" id="" cols="30" rows="10"></textarea></td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="submit" value="click to submit" name="submit_form">
+                </td>
+            </tr>
+
+
+
+        </table>
+
+
+    </form>
+
+</body>
+
+</html>
+
+-----------------------
+<!-- web page -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Web Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <h1>The Webpage</h1>
+        </div>
+        <div id="nav">
+            <ul>
+                <a href="#">
+                    <li>Home</li>
+                </a>
+                <a href="#">
+                    <li>Tech</li>
+                </a>
+                <a href="#">
+                    <li>Music</li>
+                </a>
+                <a href="#">
+                    <li>Science</li>
+                </a>
+                <a href="#">
+                    <li>Contact</li>
+                </a>
+                <div style='clear:both'> </div>
+                <!-- because of float in style css -->
+            </ul>
+        </div>
+        <!-- navigation -->
+        <div id="middle">
+            <div id="left"></div>
+            <div class="post">
+                <div class="title">Health is Wealth</div>
+                <div class="description">We&apos;are learning about HTML and this is the fake topic on health, we all need to know more... <a href="#">Continue Reading</a></div>
+            </div>
+            <div class="post">
+                <div class="title">Health is Wealth</div>
+                <div class="description">We&apos;are learning about HTML and this is the fake topic on health, we all need to know more... <a href="#">Continue Reading</a></div>
+            </div>
+            <div id="right">
+                <h2>Latest Posts</h2>
+                <div id="latest_post_group">
+                    <div class="latest_post">Health is Wealth</div>
+                    <div class="latest_post">Health is Wealth</div>
+                    <div class="latest_post">Health is Wealth</div>
+                    <div class="latest_post">Health is Wealth</div>
+                    <div class="latest_post">Health is Wealth</div>
+                </div><br>
+                <div>
+                    <div class="news_letter_head">Our News Letter</div>
+                    <input type="text">
+                    <input type="submit">
+                </div>
+            </div>
+
+        </div>
+        <div style='clear:both'> </div>
+    </div>
+    <div id="footer">
+        Copiright &copy; 2019 Bruno Scalgione
+    </div>
+
+
+    </div>
+
+</body>
+
+</html>
+
+---------------
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>

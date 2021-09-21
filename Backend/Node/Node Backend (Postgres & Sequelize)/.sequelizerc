@@ -1,0 +1,7 @@
+const path = require('path');
+
+module.exports = {
+    config: path.resolve(__dirname, 'src', 'config', 'database.js'), // pq o sequelize nao tava rodando a aplicacao no inicio pra achar o config
+    'migrations-path': path.resolve(__dirname, 'src', 'database', 'migrations'), // onde eu quero armazenar as migrations, ou seja, o historico de mudancas nas tabelas
+
+};

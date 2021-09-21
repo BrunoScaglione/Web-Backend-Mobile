@@ -1,0 +1,31 @@
+# definindo a tipagem de um usuário
+# ! quer dizer que eh obrigatório retornar 
+# nao confundir isso com o model User
+type User {
+  id: ID!
+  name: String!
+  email: String!
+}
+
+# nosso schema, análogo as rotas do REST
+
+type Query {
+  users: [User!]! # obrigatório retornar um array e dentro desse array é brigatório que sejam usuários(mas eu nao vou precisar pegar todos os campos na req)
+  user(id: ID!): User # se mandarem um ID errado, nao queremos retornar usuário
+}
+
+type Mutation {
+  createUser(name: String!, email: String!): User #se mandarem repetido, ou email nao valido nao quuremos devolver usuário  
+}
+
+# ex de query:
+# query {
+#   users {
+#     id
+#     name
+#     email
+#   }
+# }
+
+# users eh a funcao resolver , e queremos os campos id, name e email entao passaremos como parametros eles
+# !! nao precisa de virgula entre os paramtros !!

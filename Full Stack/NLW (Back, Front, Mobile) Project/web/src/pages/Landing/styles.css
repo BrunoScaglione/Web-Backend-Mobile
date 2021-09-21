@@ -1,0 +1,154 @@
+/* importante: tem uma faixa de width de screen que o layout da uma bugada, 
+isso acontece pq quando vc aumenta  width a imagem aumenta proporcionalmente pois por :default
+sempre mantem o ratio da imagem, entao a div page-langing-content comeca a ficar mais comprida e passa o tamanho do 
+pai dela */
+
+/* no do diego a trasnsição fica boa porque a tela dele é maior, ele fez pensando na dele*/
+
+#page-landing {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--color-text-in-primary);
+  background: var(--color-primary);
+}
+
+.logo-container img {
+  height: 10rem;
+}
+
+.hero-image {
+  width: 100%;
+
+}
+
+.logo-container {
+  text-align: center;
+  margin-bottom: 3.2rem;
+}
+
+.logo-container h2 {
+  font-weight: 500;
+  font-size: 2.4rem;
+  line-height: 4.6rem;
+  margin-top: 0.8rem;
+}
+
+.buttons-container {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  /* margin: emcimaeembaixo doslados; */
+  margin: 3.2rem 0; 
+}
+
+.buttons-container a {
+  width: 30rem;
+  height: 10.4rem;
+  border-radius: 0.8rem;
+  font: 700 2.0rem Archivo;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+  color: var(--color-button-text);
+
+  transition: background-color 0.2s;
+}
+
+.buttons-container a:first-child {
+  margin-right: 1.6rem;
+}
+
+.buttons-container a.study {
+  background: var(--color-primary-lighter);
+}
+
+.buttons-container a.give-classes {
+  background: var(--color-secundary);
+}
+
+.buttons-container a.study:hover {
+  background: var(--color-primary-light);
+}
+
+.buttons-container a.give-classes:hover {
+  background: var(--color-secundary-dark);
+}
+
+.buttons-container a img {
+  margin-right: 2.4rem;
+}
+
+.total-connections {
+  font-size: 1.4rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.total-connections img {
+  margin-left: 0.8rem;
+}
+
+@media (min-width: 1100px) {
+  #page-landing-content {
+    max-width: 1100px;
+
+    display: grid;
+    grid-template-rows: 350px 1fr;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-areas:
+     "logo hero hero"
+     "buttons buttons total"
+     ;
+  }
+
+  .logo-container {
+    grid-area: logo;
+    align-self: center; /* horizontal */
+    /* funciona pra alinhar coisas dentro de dentro da div, quando nao estamos no flexbox (nao eh soh
+    texto, nesse caso alinhou uma imagem)*/
+    text-align: left; 
+    margin: 0; /* pq antes pro mobile a gente tinha colocado */
+  }
+
+  .logo-container img {
+    /* nao vai ser a altura do pai, mas sim a maior altura possivel dentro do pai, 
+    pois tem um div irmao emabixo, "Sua plataforma de estudos online" */
+    height: 100%
+  }
+
+  .logo-container h2 {
+    text-align: initial;
+    font-size: 3.6rem ;
+  }
+  
+  .hero-image {
+    grid-area: hero;
+    justify-self: end; /*soh pra agrantir que fica lah na direita*/
+
+  }
+  
+  .buttons-container {
+    grid-area: buttons;
+    justify-content: flex-start;
+  }
+
+  .buttons-container a {
+    font-size: 2.4rem;
+  }
+
+  .total-connections {
+    grid-area: total;
+    justify-self: end;
+  }
+} 
+
